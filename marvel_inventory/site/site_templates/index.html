@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--Flask Flashed Message to user-->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories = true) %}
+         {% if messages %}
+            {% for cat, msg in messages%}
+             {% if cat == 'user-created' %}
+                <div class="alert alert-success">
+                    {{ msg }}
+                    <button type = "button" class = 'close' data-dismiss = 'alert' >&times;</button>
+                </div>
+
+                {% elif cat == 'auth-success' %}
+                <div class="alert alert-success">
+                    {{ msg }}
+                    <button type = "button" class = 'close' data-dismiss = 'alert' >&times;</button>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+</div>
+
+<div class="container">
+    <!--Header Section-->
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>Let's share our love for the Marvel universe together!</h2>
+            <h5>Creating a more effective way for Marvel fans to come together</h5>
+            <div>
+                <button class="btn btn-primary">View Our Docs</button>
+                <button class="btn btn-primary">Join Our Slack</button>
+            </div>
+        </div>
+
+        <!--Header Image-->
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/undraw_order_a_car_3tww (1).png" alt="" class="header-img">
+        </div>
+    </header>
+
+     <!--Stat of Middle Section-->
+     <section class="row">
+        <div class="col-12" id="middle-text">
+            <h2>Display Your Inventory</h2>
+            <p>You can view the many different Comics we have in store</p>
+        </div>
+    </section>
+
+    <!--Collection of Features-->
+
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/captain-america.png" alt="Captain-America" id="Cap-image">
+            <h4>Captain America</h4>
+            <p> We all Stan Steve Rogers!</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/iron-man.png" alt="IronMan-image" id="ironman-image">
+            <h4>Iron Man</h4>
+            <p>Tony Stark, one of the most beloved characters!</p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/icons8-avengers-480.png" alt="Avengers-image" id="avengers-image">
+            <h4>Avengers</h4>
+            <p> Avengers Assemble!</p>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/undraw_town_r6pc.png" alt="marvellogo-image image" id="town-image">
+        </div>
+        <div class="col-12 col-md-6">
+            <h4>Connect with your fellow Marvel lovers</h4>
+            <p>Talk with other Marvel fans about your favorite characters!
+                Join the slack channel today!!
+            </p>
+            <div>
+                <button class="btn btn-primary">View on Github</button>
+                <button class="btn btn-primary">Join Our Slack Channel!</button>
+            </div>
+        </div>
+    </section>
+
+    <!--Start of Footer section-->
+    <footer class="row" id="footer">
+        <div class="col-2 col-md-2">
+            <img src="../../static/images/Coding Drones Logo.png" alt="Coding Drones Logo" id="footer-logo">
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>Platform</h4>
+                <p>Socials</p>
+                <p>The Marvel Project</p>
+                <p>Donate</p>
+                <p>Spread the word</p>
+                <p>Contact Us</p>
+            </div>
+        </div>
+
+            <div class="col-2 col-md-2">
+                <div class="footer-text-flex">
+                    <h4>Platform</h4>
+                    <p>Socials</p>
+                    <p>The Marvel Project</p>
+                    <p>Donate</p>
+                    <p>Spread the word</p>
+                    <p>Contact Us</p>
+                </div>
+            </div>
+
+                <div class="col-2 col-md-2">
+                    <div class="footer-text-flex">
+                        <h4>Platform</h4>
+                        <p>Socials</p>
+                        <p>The Marvel Project</p>
+                        <p>Donate</p>
+                        <p>Spread the word</p>
+                        <p>Contact Us</p>
+                    </div>
+                </div>
+
+                    <div class="col-2 col-md-2">
+                        <div class="footer-text-flex">
+                            <h4>Platform</h4>
+                            <p>Socials</p>
+                            <p>The Marvel Project</p>
+                            <p>Donate</p>
+                            <p>Spread the word</p>
+                            <p>Contact Us</p>
+                        </div>
+                    </div>
+
+                        <div class="col-2 col-md-2">
+                            <div class="footer-text-flex">
+                                <h4>Platform</h4>
+                                <p>Socials</p>
+                                <p>The Marvel Project</p>
+                                <p>Donate</p>
+                                <p>Spread the word</p>
+                                <p>Contact Us</p>
+                            </div>
+        </div>
+    </footer>
+</div>
+
+
+{% endblock content %}
